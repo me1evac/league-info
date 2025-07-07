@@ -96,18 +96,16 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-
 .player-header-wrapper {
   width: 100%;
   background-color: #1e1e2f;
-  padding: 48px 60px; 
+  padding: 48px 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid #3c3c5a;
 }
-
 
 .player-profile {
   display: flex;
@@ -128,7 +126,6 @@ body {
   border: 3px solid #7f7f7f;
   background-color: #1c1c1f;
 }
-
 
 .level-badge {
   position: absolute;
@@ -154,7 +151,7 @@ body {
 
 .player-name-row {
   display: flex;
-  align-items: baseline; 
+  align-items: baseline;
   gap: 6px;
   max-width: 100%;
   overflow: hidden;
@@ -165,7 +162,7 @@ body {
   font-size: clamp(1.2rem, 6vw, 2.25rem);
   font-weight: 800;
   color: #ffffff;
-  line-height: 1.2; /* 🔧 adjust to lift the text a little */
+  line-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -173,7 +170,7 @@ body {
 }
 
 .player-tag {
-  font-size: clamp(0.9rem, 4vw, 1.125rem); /* Scales smaller too */
+  font-size: clamp(0.9rem, 4vw, 1.125rem);
   color: #aaaaaa;
 }
 
@@ -273,5 +270,31 @@ body {
   .ranked-record,
   .ranked-winrate {
     font-size: 0.95rem;
+  }
+}
+
+/* 🔧 Add mobile fix for player section centering */
+@media (max-width: 640px) {
+  .player-header-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 20px;
+    text-align: center;
+  }
+
+  .player-profile {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .player-details {
+    align-items: center;
+  }
+
+  .player-name-row {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
