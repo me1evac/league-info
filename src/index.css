@@ -97,15 +97,23 @@ body {
 }
 
 
+.player-header-wrapper {
+  width: 100%;
+  background-color: #31313c;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
 .player-profile {
   max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 24px 40px;
-  color: white;
-  box-sizing: border-box;
+  
 }
 
 .icon-wrapper {
@@ -156,8 +164,8 @@ body {
 
 .region-flag {
   margin-top: 10px;
-  width: 35px;
-  height: 23px;
+  width: 25px;
+  height: 18px;
   object-fit: cover;
   border-radius: 3px;
 }

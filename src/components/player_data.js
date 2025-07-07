@@ -50,6 +50,10 @@ export default function PlayerData() {
     fetchPlayerData();
   }, []);
 
+
+  if (error) return <p>Error: {error}</p>;
+  if (!player) return <p>Loading...</p>;
+
   return (
     <header
       className="player-header-wrapper"
@@ -58,17 +62,17 @@ export default function PlayerData() {
       <div className="player-profile">
         <div className="icon-wrapper">
           <img
-            src={`https://ddragon.leagueoflegends.com/cdn/14.13.1/img/profileicon/690.png`}
+            src={`https://ddragon.leagueoflegends.com/cdn/14.13.1/img/profileicon/${player.iconId}.png`}
             alt="Summoner Icon"
             className="player-icon"
           />
-          <span className="level-badge">111</span>
+          <span className="level-badge">{player.level}</span>
         </div>
 
         <div className="player-details">
           <div className="player-name-row">
-            <h2 className="player-name">IGhunny</h2>
-            <span className="player-tag"> #IGF</span>
+            <h2 className="player-name">{player.name}</h2>
+            <span className="player-tag"> #{player.tag}</span>
           </div>
 
           <img
