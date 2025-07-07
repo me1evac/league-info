@@ -99,48 +99,51 @@ body {
 
 .player-header-wrapper {
   width: 100%;
-  background-color: #31313c;
-  padding: 24px 40px;
+  background-color: #1e1e2f;
+  padding: 48px 60px; 
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  border-bottom: 2px solid #3c3c5a;
 }
+
 
 .player-profile {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
 }
 
 .icon-wrapper {
   position: relative;
-  width: 86px;
-  height: 86px;
+  width: 128px;
+  height: 128px;
 }
 
 .player-icon {
-  width: 86px;
-  height: 86px;
-  border-radius: 8px;
-  border: 2px solid #7f7f7f;
+  width: 128px;
+  height: 127px;
+  border-radius: 12px;
+  border: 3px solid #7f7f7f;
   background-color: #1c1c1f;
 }
+
 
 .level-badge {
   position: absolute;
-  bottom: -6px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1c1c1f;
-  border: 2px solid #333;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #f0f0f0;
+  background-color: #20202c;
+  border: 2px solid #444;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #facc15;
 }
 
-/* Name and tagline */
 .player-details {
   display: flex;
   flex-direction: column;
@@ -150,24 +153,117 @@ body {
 .player-name-row {
   display: flex;
   align-items: baseline;
-  gap: 6px;
-  margin-bottom: 4px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .player-name {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 800;
   color: #ffffff;
+  line-height: 1;
 }
 
 .player-tag {
-  font-size: 14px;
+  font-size: 20px;
   color: #aaaaaa;
 }
 
 .region-flag {
-  width: 24px;
-  height: 18px;
+  width: 32px;
+  height: 24px;
   border-radius: 2px;
   object-fit: cover;
+}
+
+.ranked-card {
+  background-color: #1e1e2f;
+  padding: 2rem;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  color: #f0f0f0;
+  width: 100%;
+  max-width: 480px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.ranked-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ranked-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ranked-icon {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.ranked-info {
+  text-align: center;
+}
+
+.ranked-tier {
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.lp {
+  margin-left: 0.5rem;
+  font-size: 1.125rem;
+  color: #cccccc;
+}
+
+.ranked-record {
+  font-size: 1rem;
+  color: #bbbbbb;
+  margin-bottom: 0.4rem;
+}
+
+.ranked-winrate {
+  font-size: 1rem;
+  color: #88ccff;
+}
+
+/* 🔽 Responsive tweaks for screens under 640px (phones) */
+@media (max-width: 640px) {
+  .ranked-card {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0.75rem;
+  }
+
+  .ranked-title {
+    font-size: 1.25rem;
+  }
+
+  .ranked-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .ranked-tier {
+    font-size: 1.25rem;
+  }
+
+  .lp {
+    font-size: 1rem;
+  }
+
+  .ranked-record,
+  .ranked-winrate {
+    font-size: 0.95rem;
+  }
 }

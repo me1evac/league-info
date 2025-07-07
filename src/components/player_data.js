@@ -55,6 +55,7 @@ export default function PlayerData() {
   if (!player) return <p>Loading...</p>;
 
   return (
+    <>
     <header
       className="player-header-wrapper"
       style={{ backgroundColor: "#31313c" }}
@@ -83,5 +84,26 @@ export default function PlayerData() {
         </div>
       </div>
     </header>
+
+    <section className="ranked-card">
+    <h3 className="ranked-title">Xếp hạng Đơn/Đôi</h3>
+    <div className="ranked-main">
+      <img
+        className="ranked-icon"
+        src="https://opgg-static.akamaized.net/images/medals/iron_4.png"
+        alt="Iron 4"
+      />
+      <div className="ranked-info">
+        <div className="ranked-tier">
+          <span className="tier-name">Iron 4</span>
+          <span className="lp">54 LP</span>
+        </div>
+        <div className="ranked-record">81T 106B</div>
+        <div className="ranked-winrate">Tỉ lệ thắng 43%</div>
+      </div>
+    </div>
+    </section>
+
+    </>
   );
 }
