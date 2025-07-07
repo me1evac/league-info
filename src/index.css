@@ -148,24 +148,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .player-name-row {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 10px;
+  align-items: baseline; 
+  gap: 6px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .player-name {
-  font-size: 36px;
+  font-size: clamp(1.2rem, 6vw, 2.25rem);
   font-weight: 800;
   color: #ffffff;
-  line-height: 1;
+  line-height: 1.2; /* 🔧 adjust to lift the text a little */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .player-tag {
-  font-size: 20px;
+  font-size: clamp(0.9rem, 4vw, 1.125rem); /* Scales smaller too */
   color: #aaaaaa;
 }
 
@@ -183,7 +191,7 @@ body {
   border-radius: 1rem;
   color: #f0f0f0;
   width: 100%;
-  max-width: 480px;
+  max-width: 300px;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: column;

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 
+//Yn14M1l68wMgtzCA9E9glC6oy9LmFra1-4eyWASGGyrBLoBs6mNwMMLqdXB8vo5gvJ2gtJiArlJtqg
+
 const API_KEY = `RGAPI-d0aeb01d-fcb7-4f18-9c9f-8590c5c3cf18`;
-const masteryUrl = `https://vn2.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/Esk4q_dyzd9KaVNl875_6QhltP_vIJrMWhjJpj4gK6rFIX2gl1FD0tyZ2emb-ZqBnYx0ME-ay2O6zw/top`;
+const puui_var = 'Esk4q_dyzd9KaVNl875_6QhltP_vIJrMWhjJpj4gK6rFIX2gl1FD0tyZ2emb-ZqBnYx0ME-ay2O6zw'
+const masteryUrl = `https://vn2.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puui_var}/top`;
 const championDataUrl = `https://ddragon.leagueoflegends.com/cdn/14.13.1/data/en_US/champion.json`;
 const version = "14.13.1";
 
@@ -13,7 +16,6 @@ export default function ApiData() {
   useEffect(() => {
     const fetchAllData = async () => {
       try {
-        // Fetch top mastery data
         const masteryRes = await fetch(masteryUrl, {
           headers: {
             "X-Riot-Token": API_KEY,
