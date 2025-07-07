@@ -35,7 +35,7 @@ body {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Add this line */
+  justify-content: space-between;
   width: 100%;
   min-height: 80px;
   box-sizing: border-box;
@@ -106,14 +106,12 @@ body {
   align-items: center;
 }
 
-/* Container for icon + info */
 .player-profile {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Icon + badge */
 .icon-wrapper {
   position: relative;
   width: 86px;
@@ -167,7 +165,6 @@ body {
   color: #aaaaaa;
 }
 
-/* Region flag */
 .region-flag {
   width: 24px;
   height: 18px;
