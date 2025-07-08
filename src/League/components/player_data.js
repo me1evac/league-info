@@ -5,7 +5,7 @@ export default function PlayerData({gameName, tagLine}) {
   const [ranked, setRanked] = useState(null);
   const [error, setError] = useState(null);
 
-  const riotApiKey = "RGAPI-d0aeb01d-fcb7-4f18-9c9f-8590c5c3cf18";
+  const riotApiKey = "RGAPI-1ffd7b05-1c6d-425a-b9a7-4013e0cb0ca1";
   // const gameName = "Hakuna Matata";
   // const tagLine = "kiaya";
 
