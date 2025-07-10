@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import LeaguePlayerData from "./League/league";
-import TFTData from "./tft";
+import TFTData from "./TFT/tft";
+
 
 function App() {
-  const [activeTab, setActiveTab] = useState("league");
+  const [activeTab, setActiveTab] = useState("tft");
 
   return (
     <div>

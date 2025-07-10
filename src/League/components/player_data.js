@@ -5,7 +5,9 @@ export default function PlayerData({gameName, tagLine}) {
   const [ranked, setRanked] = useState(null);
   const [error, setError] = useState(null);
 
-  const riotApiKey = "RGAPI-1ffd7b05-1c6d-425a-b9a7-4013e0cb0ca1";
+  // const riotApiKey = "RGAPI-1ffd7b05-1c6d-425a-b9a7-4013e0cb0ca1";
+  const riotApiKey = process.env.REACT_APP_RIOT_API;
+  console.log(riotApiKey)
   // const gameName = "Hakuna Matata";
   // const tagLine = "kiaya";
 
@@ -95,9 +97,7 @@ export default function PlayerData({gameName, tagLine}) {
             lp: soloRank.leaguePoints,
             wins: soloRank.wins,
             losses: soloRank.losses,
-            winrate: Math.round(
-              (soloRank.wins / (soloRank.wins + soloRank.losses)) * 100
-            ),
+            winrate: Math.round((soloRank.wins / (soloRank.wins + soloRank.losses)) * 100),
           });
         } else {
           setRanked(null);
@@ -108,7 +108,7 @@ export default function PlayerData({gameName, tagLine}) {
     };
 
     fetchPlayerData();
-  }, [gameName, tagLine]);
+  }, [gameName, tagLine, riotApiKey]);
 
   if (error) return <p color="red">Error: {error}</p>;
   if (!player) return <p>Loading...</p>;

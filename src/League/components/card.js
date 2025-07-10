@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Replace this API key with yours
-const API_KEY = `RGAPI-1ffd7b05-1c6d-425a-b9a7-4013e0cb0ca1`;
+const API_KEY = process.env.REACT_APP_RIOT_API;
 const puuid = "Esk4q_dyzd9KaVNl875_6QhltP_vIJrMWhjJpj4gK6rFIX2gl1FD0tyZ2emb-ZqBnYx0ME-ay2O6zw";
 
 const masteryUrl = `https://vn2.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top`;
